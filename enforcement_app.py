@@ -12,16 +12,7 @@ import pandas as pd
 import plotly.express as px
 
 # Sample data (replace with your dataset)
-data = pd.DataFrame({
-    'Month Fined': ['October 1, 2024', 'May 7, 2024', 'October 1, 2024', 'May 9, 2024'],
-    'Organization': ['Barclays', 'Oppenheimer & Co. Inc.', 'BGC Derivative Markets, L.P.', 'Merrill Lynch'],
-    'Enforcement Type': ['Reporting Violation', 'Supervisory Failure', 'Reporting Violation', 'Supervisory Failure'],
-    'Enforcement Sub-category': ['Swap Reporting Error', 'Execution Timeliness', 'SEF Core Principle Violation', 'Execution Timeliness'],
-    'Description': ['Failed to correctly or timely report swaps', 'Failed to supervise customer order execution times', 'Failed to report thousands of swaps', 'Issues in customer order execution'],
-    'Fined Value': [4000000, 500000, 1300000, 825000],
-    'Case ID': ['N/A', '2017052438501', 'N/A', '2017054488401'],
-    'CRD Number': ['N/A', '249', 'N/A', '7691']
-})
+data = pd.read_csv('Enforcement_Actions_.csv')
 
 # Initialize Dash app with a Bootstrap theme
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.CERULEAN])
